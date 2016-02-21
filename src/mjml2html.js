@@ -8,6 +8,8 @@ import React from "react";
 import ReactDOMServer from "react-dom/server";
 import _ from "lodash";
 
+import defaultFonts from "/var/www/html/mjml/extraFonts";
+
 const debug = require("debug")("mjml-engine/mjml2html");
 
 const internals = {
@@ -205,6 +207,7 @@ const internals = {
     return `<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  ${extraFonts}
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>${title}</title>
   <style type="text/css">
